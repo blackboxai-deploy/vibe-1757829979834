@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium modern login page with interactive animations and glass-morphism design">
+    <meta name="keywords" content="login, authentication, modern, interactive, premium, glass-morphism">
+    <meta name="author" content="Premium Auth">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <title>Premium Login - Modern Authentication</title>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-container">
+        <!-- Gradient Background -->
+        <div class="gradient-bg"></div>
+        
+        <!-- Animated Mesh Background -->
+        <div class="mesh-bg">
+            <div class="mesh-blob mesh-blob-1"></div>
+            <div class="mesh-blob mesh-blob-2"></div>
+            <div class="mesh-blob mesh-blob-3"></div>
+        </div>
+
+        <!-- Floating Geometric Shapes -->
+        <div class="floating-shapes">
+            <!-- Floating Circles -->
+            <div class="shape circle shape-1"></div>
+            <div class="shape circle shape-2"></div>
+            <div class="shape circle shape-3"></div>
+            <div class="shape circle shape-4"></div>
+            
+            <!-- Floating Squares -->
+            <div class="shape square shape-5"></div>
+            <div class="shape square shape-6"></div>
+            <div class="shape square shape-7"></div>
+            
+            <!-- Floating Triangles -->
+            <div class="shape triangle shape-8"></div>
+            <div class="shape triangle shape-9"></div>
+            
+            <!-- Floating Lines -->
+            <div class="shape line shape-10"></div>
+            <div class="shape line shape-11"></div>
+        </div>
+
+        <!-- Subtle Grid Pattern -->
+        <div class="grid-pattern"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <div class="brand-logo">
+                <div class="logo-outer">
+                    <div class="logo-inner">
+                        <div class="logo-core"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="brand-title">Premium Auth</h1>
+            <p class="brand-subtitle">Experience the future of authentication with our modern, secure login system</p>
+        </header>
+
+        <!-- Login Form Section -->
+        <section class="form-section">
+            <!-- Glass-morphism Login Card -->
+            <div class="login-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <div class="icon-bg">
+                            <div class="icon-inner"></div>
+                        </div>
+                    </div>
+                    <h2 class="card-title" id="form-title">Welcome Back</h2>
+                    <p class="card-subtitle" id="form-subtitle">Sign in to your account to continue</p>
+                </div>
+
+                <div class="card-content">
+                    <!-- Login Form -->
+                    <form class="login-form" id="authForm" novalidate>
+                        <!-- Email Input -->
+                        <div class="input-group">
+                            <label for="email" class="input-label">
+                                Email Address
+                                <span class="validation-icon"></span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="Enter your email"
+                                    required
+                                    autocomplete="email"
+                                >
+                                <div class="input-feedback"></div>
+                            </div>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="input-group" id="password-group">
+                            <label for="password" class="input-label">
+                                Password
+                                <span class="validation-icon"></span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    placeholder="Enter your password"
+                                    required
+                                    minlength="8"
+                                    autocomplete="current-password"
+                                >
+                                <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                                    <span class="toggle-icon">👁️</span>
+                                </button>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <span class="error-message" id="password-error"></span>
+                        </div>
+
+                        <!-- Additional Fields for Register Mode (Hidden by default) -->
+                        <div class="input-group" id="confirm-password-group" style="display: none;">
+                            <label for="confirm-password" class="input-label">
+                                Confirm Password
+                                <span class="validation-icon"></span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="confirm-password" 
+                                    name="confirm-password" 
+                                    class="form-input" 
+                                    placeholder="Confirm your password"
+                                    minlength="8"
+                                    autocomplete="new-password"
+                                >
+                                <div class="input-feedback"></div>
+                            </div>
+                            <span class="error-message" id="confirm-password-error"></span>
+                        </div>
+
+                        <!-- Remember Me & Forgot Password (Login Mode) -->
+                        <div class="form-options" id="login-options">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="remember" name="remember" class="form-checkbox">
+                                <label for="remember" class="checkbox-label">Remember me</label>
+                            </div>
+                            <button type="button" class="forgot-link" id="forgot-btn">Forgot password?</button>
+                        </div>
+
+                        <!-- Terms Checkbox (Register Mode - Hidden by default) -->
+                        <div class="checkbox-group" id="terms-group" style="display: none;">
+                            <input type="checkbox" id="terms" name="terms" class="form-checkbox" required>
+                            <label for="terms" class="checkbox-label">I accept the terms and conditions</label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Sign In</span>
+                            <div class="btn-loader">
+                                <div class="loader-spinner"></div>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="card-footer">
+                    <!-- Mode Switching -->
+                    <div class="mode-switch">
+                        <p class="switch-text" id="switch-text">
+                            Don&apos;t have an account? 
+                            <button type="button" class="switch-btn" id="switch-btn">Sign up</button>
+                        </p>
+                    </div>
+
+                    <!-- Social Login -->
+                    <div class="social-login">
+                        <div class="divider">
+                            <span class="divider-text">Or continue with</span>
+                        </div>
+                        
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google-btn">
+                                <span class="social-icon">🔍</span>
+                                <span class="social-text">Google</span>
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <span class="social-icon">📘</span>
+                                <span class="social-text">Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <span class="footer-dot"></span>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <span class="footer-dot"></span>
+                <a href="#" class="footer-link">Support</a>
+            </div>
+            <p class="footer-copyright">© 2024 Premium Auth. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Decorative Glows -->
+    <div class="decorative-glows">
+        <div class="glow glow-top-left"></div>
+        <div class="glow glow-bottom-right"></div>
+        <div class="glow glow-center"></div>
+    </div>
+
+    <!-- Vignette Effect -->
+    <div class="vignette"></div>
+
+    <!-- Minimal JavaScript for Form Mode Switching and Password Toggle -->
+    <script>
+        // Form mode switching
+        const switchBtn = document.getElementById('switch-btn');
+        const switchText = document.getElementById('switch-text');
+        const formTitle = document.getElementById('form-title');
+        const formSubtitle = document.getElementById('form-subtitle');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const loginOptions = document.getElementById('login-options');
+        const confirmPasswordGroup = document.getElementById('confirm-password-group');
+        const termsGroup = document.getElementById('terms-group');
+        const forgotBtn = document.getElementById('forgot-btn');
+
+        let currentMode = 'login'; // login, register, forgot
+
+        function switchMode(mode) {
+            currentMode = mode;
+            
+            if (mode === 'register') {
+                formTitle.textContent = 'Create Account';
+                formSubtitle.textContent = 'Join us today and get started';
+                btnText.textContent = 'Create Account';
+                switchText.innerHTML = 'Already have an account? <button type="button" class="switch-btn" id="switch-btn">Sign in</button>';
+                loginOptions.style.display = 'none';
+                confirmPasswordGroup.style.display = 'block';
+                termsGroup.style.display = 'block';
+            } else if (mode === 'forgot') {
+                formTitle.textContent = 'Reset Password';
+                formSubtitle.textContent = 'Enter your email to reset your password';
+                btnText.textContent = 'Send Reset Link';
+                switchText.innerHTML = 'Remember your password? <button type="button" class="switch-btn" id="switch-btn">Sign in</button>';
+                loginOptions.style.display = 'none';
+                confirmPasswordGroup.style.display = 'none';
+                termsGroup.style.display = 'none';
+                document.getElementById('password-group').style.display = 'none';
+            } else { // login
+                formTitle.textContent = 'Welcome Back';
+                formSubtitle.textContent = 'Sign in to your account to continue';
+                btnText.textContent = 'Sign In';
+                switchText.innerHTML = 'Don&apos;t have an account? <button type="button" class="switch-btn" id="switch-btn">Sign up</button>';
+                loginOptions.style.display = 'flex';
+                confirmPasswordGroup.style.display = 'none';
+                termsGroup.style.display = 'none';
+                document.getElementById('password-group').style.display = 'block';
+            }
+            
+            // Re-attach event listener to new switch button
+            document.getElementById('switch-btn').addEventListener('click', handleSwitchClick);
+        }
+
+        function handleSwitchClick() {
+            if (currentMode === 'login') {
+                switchMode('register');
+            } else {
+                switchMode('login');
+            }
+        }
+
+        switchBtn.addEventListener('click', handleSwitchClick);
+        forgotBtn.addEventListener('click', () => switchMode('forgot'));
+
+        // Password toggle
+        const passwordToggle = document.querySelector('.password-toggle');
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = passwordToggle.querySelector('.toggle-icon');
+
+        passwordToggle.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.textContent = '👁️‍🗨️';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.textContent = '👁️';
+            }
+        });
+
+        // Form submission
+        document.getElementById('authForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Add loading state
+            submitBtn.classList.add('loading');
+            
+            // Simulate API call
+            setTimeout(() => {
+                submitBtn.classList.remove('loading');
+                alert(`Success! ${currentMode === 'login' ? 'Signed in' : currentMode === 'register' ? 'Account created' : 'Reset link sent'} successfully.`);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
