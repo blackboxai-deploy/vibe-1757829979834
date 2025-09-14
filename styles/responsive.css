@@ -1,0 +1,498 @@
+/* ===== RESPONSIVE DESIGN - MOBILE FIRST ===== */
+
+/* ===== BASE (MOBILE) STYLES ===== */
+/* Default styles in main.css are mobile-first (320px and up) */
+
+/* ===== SMALL MOBILE ADJUSTMENTS (up to 375px) ===== */
+@media (max-width: 375px) {
+  .main-container {
+    padding: var(--space-md);
+  }
+  
+  .brand-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .brand-subtitle {
+    font-size: var(--font-size-base);
+    padding: 0 var(--space-sm);
+  }
+  
+  .login-card {
+    margin: 0 var(--space-xs);
+  }
+  
+  .card-header {
+    padding: var(--space-xl) var(--space-lg) var(--space-md);
+  }
+  
+  .card-content {
+    padding: 0 var(--space-lg) var(--space-md);
+  }
+  
+  .card-footer {
+    padding: var(--space-md) var(--space-lg) var(--space-xl);
+  }
+  
+  .social-buttons {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
+
+/* ===== MOBILE (376px to 480px) ===== */
+@media (min-width: 376px) and (max-width: 480px) {
+  .main-container {
+    padding: var(--space-lg);
+  }
+  
+  .header-section {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .brand-subtitle {
+    max-width: 24rem;
+  }
+  
+  .login-card {
+    max-width: 24rem;
+  }
+  
+  .floating-shapes .shape {
+    transform: scale(0.9);
+  }
+}
+
+/* ===== LARGE MOBILE / SMALL TABLET (481px to 640px) ===== */
+@media (min-width: 481px) and (max-width: 640px) {
+  .main-container {
+    padding: var(--space-xl);
+  }
+  
+  .brand-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .brand-subtitle {
+    font-size: var(--font-size-lg);
+    max-width: 28rem;
+  }
+  
+  .login-card {
+    max-width: 26rem;
+  }
+  
+  .card-header {
+    padding: var(--space-2xl) var(--space-xl) var(--space-lg);
+  }
+  
+  .card-content {
+    padding: 0 var(--space-xl) var(--space-lg);
+  }
+  
+  .card-footer {
+    padding: var(--space-lg) var(--space-xl) var(--space-2xl);
+  }
+  
+  .form-input {
+    height: 3.5rem;
+    font-size: var(--font-size-lg);
+  }
+  
+  .submit-btn {
+    height: 3.5rem;
+    font-size: var(--font-size-lg);
+  }
+  
+  .social-btn {
+    height: 3.5rem;
+  }
+}
+
+/* ===== TABLET (641px to 768px) ===== */
+@media (min-width: 641px) and (max-width: 768px) {
+  .main-container {
+    padding: var(--space-2xl);
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  .header-section {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .brand-title {
+    font-size: var(--font-size-5xl);
+  }
+  
+  .login-card {
+    max-width: 28rem;
+  }
+  
+  .card-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .card-subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  /* Enhanced hover effects for tablet */
+  .form-input:hover {
+    transform: translateY(-1px);
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Larger floating shapes for bigger screens */
+  .floating-shapes .shape {
+    transform: scale(1.1);
+  }
+}
+
+/* ===== SMALL DESKTOP (769px to 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-container {
+    padding: var(--space-3xl);
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  
+  .header-section {
+    margin-bottom: var(--space-3xl);
+  }
+  
+  .brand-subtitle {
+    max-width: 36rem;
+  }
+  
+  .login-card {
+    max-width: 30rem;
+  }
+  
+  /* Enhanced glass-morphism effect for larger screens */
+  .login-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px);
+  }
+  
+  .login-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+  }
+  
+  /* More prominent decorative elements */
+  .decorative-glows .glow {
+    filter: blur(4rem);
+  }
+  
+  .mesh-blob {
+    width: 28rem;
+    height: 28rem;
+    filter: blur(5rem);
+  }
+}
+
+/* ===== LARGE DESKTOP (1025px to 1280px) ===== */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main-container {
+    padding: var(--space-3xl);
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  .login-card {
+    max-width: 32rem;
+  }
+  
+  .card-header {
+    padding: var(--space-3xl) var(--space-2xl) var(--space-xl);
+  }
+  
+  .card-content {
+    padding: 0 var(--space-2xl) var(--space-xl);
+  }
+  
+  .card-footer {
+    padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
+  }
+  
+  /* Enhanced animations for powerful devices */
+  .floating-shapes .shape {
+    transform: scale(1.2);
+  }
+  
+  .mesh-blob {
+    width: 32rem;
+    height: 32rem;
+    filter: blur(6rem);
+  }
+  
+  /* More dramatic hover effects */
+  .submit-btn:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+      0 20px 30px -10px rgba(139, 92, 246, 0.3),
+      var(--shadow-2xl);
+  }
+}
+
+/* ===== EXTRA LARGE DESKTOP (1281px and up) ===== */
+@media (min-width: 1281px) {
+  .main-container {
+    padding: var(--space-3xl);
+    max-width: 96rem;
+    margin: 0 auto;
+  }
+  
+  .header-section {
+    margin-bottom: 4rem;
+  }
+  
+  .brand-title {
+    font-size: 3.5rem;
+  }
+  
+  .brand-subtitle {
+    font-size: var(--font-size-xl);
+    max-width: 40rem;
+  }
+  
+  .login-card {
+    max-width: 34rem;
+  }
+  
+  .card-title {
+    font-size: 2.5rem;
+  }
+  
+  /* Maximum visual impact for large screens */
+  .floating-shapes .shape {
+    transform: scale(1.4);
+  }
+  
+  .mesh-blob {
+    width: 36rem;
+    height: 36rem;
+    filter: blur(7rem);
+  }
+  
+  .decorative-glows .glow {
+    filter: blur(5rem);
+  }
+  
+  .glow-top-left,
+  .glow-bottom-right {
+    width: 24rem;
+    height: 24rem;
+  }
+  
+  .glow-center {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+/* ===== ULTRA-WIDE SCREENS (1920px and up) ===== */
+@media (min-width: 1920px) {
+  .floating-shapes .shape {
+    transform: scale(1.6);
+  }
+  
+  .mesh-blob {
+    width: 40rem;
+    height: 40rem;
+  }
+  
+  /* Additional floating elements for ultra-wide */
+  .floating-shapes::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 50%;
+    animation: floatSlow 8s ease-in-out infinite;
+    animation-delay: 6s;
+  }
+  
+  .floating-shapes::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgba(6, 182, 212, 0.15);
+    border-radius: 50%;
+    animation: floatMedium 5s ease-in-out infinite;
+    animation-delay: 7s;
+  }
+}
+
+/* ===== LANDSCAPE MOBILE ORIENTATION ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .main-container {
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .header-section {
+    margin-bottom: var(--space-md);
+  }
+  
+  .brand-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .brand-subtitle {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .logo-outer {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .logo-inner {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .logo-core {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .card-header {
+    padding: var(--space-lg) var(--space-xl) var(--space-md);
+  }
+  
+  .card-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .card-subtitle {
+    font-size: var(--font-size-sm);
+  }
+  
+  .form-section {
+    max-width: 24rem;
+  }
+  
+  .footer-section {
+    margin-top: var(--space-md);
+  }
+  
+  /* Reduce floating animations for landscape mobile */
+  .floating-shapes .shape {
+    transform: scale(0.7);
+    animation-duration: 8s;
+  }
+}
+
+/* ===== HIGH DPI / RETINA DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .login-card {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .logo-outer {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Enhanced shadows for high DPI */
+  .login-card:hover {
+    box-shadow: 
+      0 40px 80px -16px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.2),
+      var(--shadow-glow);
+  }
+}
+
+/* ===== DARK MODE ENHANCEMENTS ===== */
+@media (prefers-color-scheme: dark) {
+  /* Already handled in main styles, but additional responsive tweaks */
+  
+  @media (min-width: 769px) {
+    .login-card {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    
+    .login-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+/* ===== REDUCED MOTION RESPONSIVE ===== */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shapes,
+  .mesh-bg,
+  .decorative-glows {
+    display: none;
+  }
+  
+  .login-card:hover {
+    transform: none;
+  }
+  
+  .submit-btn:hover:not(:disabled) {
+    transform: none;
+  }
+  
+  .social-btn:hover {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .background-container,
+  .floating-shapes,
+  .mesh-bg,
+  .decorative-glows,
+  .vignette {
+    display: none !important;
+  }
+  
+  .main-container {
+    background: white;
+    color: black;
+    max-width: none;
+    padding: 2rem;
+  }
+  
+  .login-card {
+    background: white;
+    border: 2px solid #ccc;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  
+  .brand-title,
+  .card-title {
+    color: black;
+    -webkit-text-fill-color: black;
+  }
+  
+  .social-login {
+    display: none;
+  }
+}
